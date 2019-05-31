@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+#page-heading{
+    text-align: center;
+    color: #787878;
+    margin: 10px;
+}
+#phone-container{
+    margin: auto;
+    width: 60%;
+}
+#phone-list{
+    list-style: none;
+    margin-left:0 !important;
+}
+#phone-list li{
+    background-color: #638FFA;
+    margin: 1px;
+    border: 1px soild white;
+}
+#phone-list li:hover{
+    background-color: #787878;
+}
+.person-name{
+    display: inline-block;
+    color: white;
+    text-align: left;
+    width: 45%;
+    margin: 2%;
+}
+.person-phone{
+    display: inline-block;
+    text-align: right;
+    width: 45%;
+    color:white;
+    margin: 2%;
+}
+#phone-entry{
+    width: 60%;
+    margin: auto;
+}
+#phone-entry input{
+    width: 42%;
+    border: none;
+    border-bottom: 1px black solid;
+}
+#phone-entry button{
+    width: 13%;
+    color: white;
+    height: 5%;
+    padding: 2px;
+    background-color: #787878;
+}

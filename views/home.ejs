@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <i class="fas fa-address-book"></i>
+            Rendering from template engine
+        </h1>
+        <div id="phone-container">
+            <ul id="phone-list">
+                <% for(let i of contact_list ) { %>
+                    <li>
+                        <p class="person-name"><%= i.name%></p>
+                        <p class="person-phone"><%= i.phone%></p>
+                        <div class="delete-button">
+                            <!-- <a href="/delete-contact/<%= i.phone %>"> -->
+                            <a href="/delete-contact/?phone=<%= i.phone %>&name=<%= i.name %>&id=<%= i.id%>">
+                                <i class="fas fa-window-close"></i>
+                            </a>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+        <form action="/create-contact" method="POST" id="phone-entry">
+            <input type="text" name="name" placeholder="enter name" required>
+            <input type="number" name="phone" placeholder="enter phone" required>
+            <button type="submit">Create Contact</button>
+        </form>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
